@@ -1,14 +1,18 @@
-import React from 'react'
-import Navbar from './Navbar'
-import HeroSec from './HeroSection'
+import React from "react";
+import Navbar from "./Navbar";
+import HeroSec from "./HeroSection";
+import UpperNav from "./UpperNav";
+// import Footer from "./Footer";
 
 function AllcomRender() {
   return (
     <div>
-    <Navbar/>
-    <HeroSec/>
+      <UpperNav />
+      <Navbar />
+      <HeroSec />
+      {/* <Footer /> */}
     </div>
-  )
+  );
 }
 
-export default AllcomRender
+export default AllcomRender;

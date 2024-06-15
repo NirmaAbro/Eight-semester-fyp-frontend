@@ -1,27 +1,24 @@
 import React from "react";
-import { FaSearch } from "react-icons/fa";
-import backgroundImage from '../images/bg6.jpeg'
+import bg from "../images/girl2.png";
 
 function HeroSection() {
   return (
-    <div className="flex justify-center items-center h-screen bg-black" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      
-      <div className=" opacity-70 p-9 ">
-        <h1 className="text-2xl lg:text-5xl text-cyan-600 font-bold  md:justify-items-start ">
-          Discover endless
-          <span className="font-bold mt-8 text-white "> culinary , </span>{" "}
-          <br />
-          delights with RecipeRadar
+    <div className="flex flex-col lg:flex-row w-full justify-center font-sans items-center m-auto">
+      <div className="lg:w-1/2 w-full m-7 mt-4 flex flex-col justify-center items-center p-4 order-2 lg:order-1">
+        <h1 className="text-2xl  p-2 lg:text-4xl font-sans mb-4 text-center lg:text-left">
+          Smart Recipes, Healthier You, Personalized for You
         </h1>
-        <br />
-        <div className="flex bg-white p-2 rounded-full ">
-          <input
-            type="text"
-            placeholder="Enter any recipie"
-            className="w-full h-11 rounded-xl p-2"
-          />
-          <FaSearch className="bg-cyan-600 cursor-pointer text-4xl p-2 rounded-full" />
-        </div>
+        <h3 className="text-1xl lg:text-2xl font-sans text-center lg:text-left">
+          Discover meals tailored to your health goals with our intelligent
+          recipe recommendations,
+          <span className="text-green-500 font-sans block lg:inline">
+            Achieve a healthier you with personalized nutrition plans.
+          </span>
+        </h3>
+      </div>
+      <div className="lg:w-1/2 w-full mt-0 flex justify-center items-center order-1 lg:order-2">
+        {/* Placeholder for the image */}
+        <img src={bg} alt="Hero" className="w-full h-2/3 rounded-full" />
       </div>
     </div>
   );

@@ -1,13 +1,12 @@
-
+"use client";
 import React, { useState } from "react";
-import logo from "../images/logo.jpeg";
+import { IoFastFoodSharp } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
-import { FiLogIn } from "react-icons/fi";
-import { SiGnuprivacyguard } from "react-icons/si";
 import { IoMdCloseCircle } from "react-icons/io";
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isAboutHovered, setIsAboutHovered] = useState(false);
 
   const handleMenu = () => {
     setIsNavOpen(!isNavOpen);
@@ -15,55 +14,91 @@ function Navbar() {
 
   return (
     <>
-      <nav className="p-4 flex justify-between items-center bg-gray-800">
+      <nav className="p-4 flex justify-between items-center font-sans sticky top-0">
         <div className="flex items-center">
-          <a href="#" id="brand" className="flex items-center">
-            <img
-              src={logo}
-              alt=""
-              className="w-10 h-10 rounded-full object-cover mr-2"
-            />
-            <span className="text-xl font-semibold text-cyan-600">
-            RecipeRadar
-            </span>
-          </a>
+          <IoFastFoodSharp className="text-5xl p-2 bg-green-500 rounded-full " />
+          <span className="text-xl font-semibold m-2  font-sans">
+            SmartPalate
+          </span>
         </div>
 
         {/* Nav menu */}
-        <div className={`md:flex gap-8 hidden ${isNavOpen ? 'hidden' : ''}`}>
-          <a href="#" className="text-lg font-medium text-gray-200 hover:text-cyan-600">
+        <div className={`lg:flex gap-8 hidden ${isNavOpen ? "hidden" : ""}`}>
+          <a
+            href="#"
+            className="text-lg font-medium text-black hover:border-b-2 hover:border-green-500"
+          >
             Home
           </a>
-          <a href="#" className="text-lg font-medium text-gray-200 hover:text-cyan-600">
+          <a
+            href="#"
+            className="text-lg font-medium text-black hover:border-b-2 hover:border-green-500"
+          >
             About Us
           </a>
-          <a href="#" className="text-lg font-medium text-gray-200 hover:text-cyan-600">
-            All Recipes
-          </a>
-          <a href="#" className="text-lg font-medium text-gray-200 hover:text-cyan-600">
+          <div
+            onMouseEnter={() => setIsAboutHovered(true)}
+            onMouseLeave={() => setIsAboutHovered(false)}
+            className="relative "
+          >
+            <a
+              href="#"
+              className="text-lg font-medium text-black  hover:border-b-2 hover:border-green-500"
+            >
+              Menus
+            </a>
+            {isAboutHovered && (
+              <div className="absolute left-0 top-full mt-2 w-48 bg-black text-white shadow-lg rounded">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-black  hover:border-b-2 hover:border-green-500"
+                >
+                  Menu 1
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-black  hover:border-b-2 hover:border-green-500"
+                >
+                  Menu 2
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-black  hover:border-b-2 hover:border-green-500"
+                >
+                  Menu 3
+                </a>
+              </div>
+            )}
+          </div>
+          <a
+            href="#"
+            className="text-lg font-medium text-black  hover:border-b-2 hover:border-green-500"
+          >
             Premium
           </a>
+        </div>
+
+        <div className="m-3 lg:flex hidden ">
           {/* Sign in */}
-          <button>
-            <a href="#" className="text-lg font-medium text-gray-200 hover:text-cyan-600">
-              <FiLogIn className="bg-cyan-600 text-white p-1 rounded-lg" />
-            </a>
+
+          <button className="bg-green-500  hover:border-b-2 hover:border-green-500 m-2 hover:bg-green-700 text-white font-bold py-1 px-2 rounded">
+            LoginIn
           </button>
+
           {/* Sign up */}
-          <button>
-            <a href="#" className="text-lg font-medium text-gray-200 hover:text-cyan-600">
-              <SiGnuprivacyguard className="bg-cyan-600 text-white p-1 rounded-lg" />
-            </a>
+
+          <button className="bg-green-500  hover:border-b-2 hover:border-green-500 hover:bg-green-700 m-2 text-white font-bold py-1 px-2 rounded">
+            SignUp
           </button>
         </div>
 
         {/* Menu button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button className="p-2" onClick={handleMenu}>
             {isNavOpen ? (
-              <IoMdCloseCircle className="text-gray-200 text-3xl" />
+              <IoMdCloseCircle className="text-gray-400 text-3xl" />
             ) : (
-              <TiThMenu className="text-gray-200 text-3xl" />
+              <TiThMenu className="text-gray-400 text-3xl   hover:border-green-500" />
             )}
           </button>
         </div>
@@ -72,44 +107,58 @@ function Navbar() {
       {/* Mobile menu */}
       {isNavOpen && (
         <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-90 flex justify-end">
-          <div className="w-2/3 bg-cyan-600 h-full overflow-y-auto">
+          <div className="w-2/3 bg-black h-full overflow-y-auto">
             <div className="p-4">
               <div className="flex justify-between items-center mb-4">
                 <a href="#" id="brand" className="flex items-center">
-                  <img
-                    src={logo}
-                    alt=""
-                    className="w-10 h-10 rounded-full object-cover mr-2"
-                  />
-                  <span className="text-xl font-semibold text-white">RecipeRadar</span>
+                  <IoFastFoodSharp className="text-green-500 text-4xl rounded-full " />
+                  <span className="text-xl font-sans text-white  hover:border-b-2 hover:border-green-500">
+                    RecipeRadar
+                  </span>
                 </a>
                 <button onClick={handleMenu}>
-                  <IoMdCloseCircle className="text-gray-200 text-3xl" />
+                  <IoMdCloseCircle className="text-white text-3xl hover:border-b-2 hover:border-green-500" />
                 </button>
               </div>
               <div className="flex flex-col gap-4">
-                <a href="#" className="text-lg font-medium text-gray-200 hover:text-white">
+                <a
+                  href="#"
+                  className="text-lg font-sans text-white hover:bg-white hover:text-black"
+                >
                   Home
                 </a>
-                <a href="#" className="text-lg font-medium text-gray-200 hover:text-white">
+                <a
+                  href="#"
+                  className="text-lg font-sans text-white hover:bg-white hover:text-black"
+                >
                   About Us
                 </a>
-                <a href="#" className="text-lg font-medium text-gray-200 hover:text-white">
+                <a
+                  href="#"
+                  className="text-lg font-sans text-white hover:bg-white hover:text-black"
+                >
                   All Recipes
                 </a>
-                <a href="#" className="text-lg font-medium text-gray-200 hover:text-white">
+                <a
+                  href="#"
+                  className="text-lg font-sans text-white hover:bg-white hover:text-black"
+                >
                   Premium
                 </a>
-                <button>
-                  <a href="#" className="text-lg font-medium text-cyan-600 hover:bg-white hover:text-cyan-600 py-1 px-2 rounded-lg">
-                    Sign In
-                  </a>
-                </button>
-                <button>
-                  <a href="#" className="text-lg font-medium text-cyan-600 hover:bg-white hover:text-cyan-600 py-1 px-2 rounded-lg">
-                    Sign Up
-                  </a>
-                </button>
+
+                <a
+                  href="#"
+                  className="text-lg font-sans text-white hover:bg-white hover:text-black  py-1 px-2 rounded-lg"
+                >
+                  Sign In
+                </a>
+
+                <a
+                  href="#"
+                  className="text-lg font-sans text-white hover:bg-white hover:text-black py-1 px-2 rounded-lg"
+                >
+                  Sign Up
+                </a>
               </div>
             </div>
           </div>
