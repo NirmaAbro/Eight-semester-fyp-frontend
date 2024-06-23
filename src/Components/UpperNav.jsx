@@ -10,7 +10,7 @@ const UpperNav = () => {
           <span className="text-white p-2">SmartPalate</span>
           <span className="text-green-500">Market</span>
         </div>
-        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded">
+        <button className="bg-green-500 hover:bg-green-700 text-white font-bold  rounded">
           Buy now
         </button>
       </div>
