@@ -92,9 +92,9 @@ function Navbar() {
         <div className="lg:hidden">
           <button className="p-2" onClick={handleMenu}>
             {isNavOpen ? (
-              <IoMdCloseCircle className="text-gray-400 text-3xl" />
+              <IoMdCloseCircle className="text-white text-3xl" />
             ) : (
-              <TiThMenu className="text-gray-400 text-3xl hover:border-green-500 mt-2" />
+              <TiThMenu className="text-white text-3xl hover:border-green-500 mt-2" />
             )}
           </button>
         </div>

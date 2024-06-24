@@ -1,10 +1,9 @@
 import React from "react";
-import {
-  BrowserRouter as Router, // Alias BrowserRouter to Router for clarity
-  Routes,
-  Route,
-} from "react-router-dom";
-import { Navbar, HeroSection, About } from "./routes/pages"; // Assuming Footer is imported correctly
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import HeroSection from "./Components/HeroSection";
+import About from "./Components/About";
+import Section2 from "./Components/Section2";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
           <Route path="/" element={<HeroSection />} />
           <Route path="/home" element={<HeroSection />} />
           <Route path="/about" element={<About />} />
-          {/* Add other routes here */}
+          <Route path="/whoweare" element={<Section2 />} />
         </Routes>
       </Router>
     </div>
