@@ -26,7 +26,7 @@ function HeroSection() {
           recipe recommendations. Achieve a healthier you with personalized
           nutrition plans.
         </h5>
-        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-8">
+        <button className="bg-green-500 hover:bg-green-700 text-white font-bold md:py-2 md:px-4 p-2 rounded mt-8">
           Get Started
         </button>
       </div>

@@ -10,8 +10,10 @@ function App() {
     <div>
       <Router>
         <Navbar />
+        <HeroSection />
+        <Section2 />
         <Routes>
-          <Route path="/" element={<HeroSection />} />
+          {/* <Route index path="/" element={<HeroSection />} /> */}
           <Route path="/home" element={<HeroSection />} />
           <Route path="/about" element={<About />} />
           <Route path="/whoweare" element={<Section2 />} />

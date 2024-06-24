@@ -25,13 +25,13 @@ function Navbar() {
 
         {/* Nav menu */}
         <div className={`lg:flex gap-8 hidden ${isNavOpen ? "hidden" : ""}`}>
-          <Link className="text-lg font-medium text-black hover:border-b-2 hover:border-green-500">
+          <Link className="text-lg font-medium text-black hover:border-b-2 hover:border-black">
             Home
           </Link>
 
           <a
             href="#"
-            className="text-lg font-medium text-black hover:border-b-2 hover:border-green-500"
+            className="text-lg font-medium text-black hover:border-b-2 hover:border-black"
           >
             About Us
           </a>
