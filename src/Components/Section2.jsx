@@ -12,7 +12,7 @@ function Section2() {
           alt=""
         />
       </div>
-      <div className="w-1/2 flex flex-col justify-center items-center">
+      <div className="w-1/2 flex flex-col justify-center items-center ">
         <div className="w-full mt-28">
           <h1 className="md:text-4xl text-2xl font-sans text-left font-bold mb-4">
             Smart Recipes,{" "}

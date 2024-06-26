@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
 import About from "./Components/About";
 import Section2 from "./Components/Section2";
+import Section3 from "./Components/Section3";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Navbar />
         <HeroSection />
         <Section2 />
+        <Section3/>
+
         <Routes>
           {/* <Route index path="/" element={<HeroSection />} /> */}
           <Route path="/home" element={<HeroSection />} />
