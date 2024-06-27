@@ -24,11 +24,11 @@ const Choose = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2 w-64">
-              Elevate Learning Experiences
+            Enhanced Recipe Discovery
             </h3>
             <p className="text-center">
-              Harness the transformative power of motivation to enhance
-              educational outcomes.
+            Explore a curated selection of recipes designed to elevate your
+              culinary experiences.
             </p>
           </div>
           <div className="flex flex-col items-center mb-8 md:mb-0 md:w-1/3">
@@ -48,11 +48,11 @@ const Choose = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">
-              Beyond Traditional Teaching
+            Innovative Recipe Suggestions
             </h3>
             <p className="text-center">
-              Create a dynamic environment that surpasses conventional teaching
-              methods.
+            Discover new and innovative recipe ideas that go beyond
+              traditional cooking methods.
             </p>
           </div>
           <div className="flex flex-col items-center md:w-1/3">
@@ -70,10 +70,10 @@ const Choose = () => {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Inspire Excellence</h3>
+            <h3 className="text-xl font-semibold mb-2">Tailored Nutrition Plans</h3>
             <p className="text-center">
-              Foster student motivation and inspiration, empowering them to
-              reach their full potential.
+            Personalized nutrition plans designed to inspire healthy eating
+              habits and achieve your wellness goals.
             </p>
           </div>
         </div>

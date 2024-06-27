@@ -17,10 +17,10 @@ const AboutHero = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
             <p className="text-xl md:text-2xl lg:text-3xl font-semibold font-sans">
-              About Us
+            Discover Our Story
             </p>
             <p className="mt-4 text-3xl md:text-5xl lg:text-6xl font-bold font-sans">
-              Let's Understand Others
+            Empowering Healthier Lives Through Recipes
             </p>
           </div>
         </div>
