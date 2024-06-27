@@ -9,16 +9,16 @@
 }
 
 .mobile-heading-two {
-  @apply font-sans leading-4 font-semibold text-[11px]  text-white;
-  /* tracking-0.5p */
+  @apply font-sans leading-4 font-semibold text-[11px] tracking-normal  text-white;
+ 
 }
 
 .mobile-heading3span-twenty{
-  @apply font-sans font-semibold text-lg leading-5  text-white;
-  /* tracking-0.001em */
+  @apply font-sans font-semibold text-lg leading-5 tracking-normal text-white;
+  
 }
 .mobile-headingthree-hero {
-  @apply font-sans font-medium text-xs leading-4 tracking-[0.5%] w-[100px];
+  @apply font-sans font-medium text-xs leading-4 tracking-normal w-[100px];
 }
 
 .button-css{
@@ -32,15 +32,15 @@
 }
 
 .tablet-heading-two{
-    @apply font-sans font-semibold text-base leading-6 tracking-[0.15%] ;
+    @apply font-sans font-semibold text-base leading-6 tracking-normal ;
 }
 
 .tablet-heading3span-twenty{
-    @apply font-sans font-semibold text-base leading-6 tracking-[0.15%];
+    @apply font-sans font-semibold text-base leading-6 tracking-normal;
 }
 
 .tablet-heading3-hero{
-    @apply font-sans leading-4 font-semibold tracking-[0.5%] max-w-full;
+    @apply font-sans leading-4 font-semibold tracking-normal max-w-full;
 }
  /* .tablet-button-css{
     @apply  w-[82px] h-5 py-2.5 px-3 gap-[5.03px] ;
@@ -49,7 +49,7 @@
 /* desktop hero section headings  */
 
 .desktop-htwo-headingone{
-@apply font-sans font-bold text-6xl leading-[44px] tracking-[-0.5%] ;
+@apply font-sans font-bold text-6xl leading-[44px] tracking-tight ;
 }
 
 .desktop-Hsix-headingtwo{
@@ -58,10 +58,10 @@
 }
 
 .desktop-heading3-twenty{
-    @apply font-sans text-3xl leading-9 font-bold tracking-[0.25%] ;
+    @apply font-sans text-3xl leading-9 font-bold tracking-wide ;
 }
 .desktop-hsix-headingthree{
-    @apply text-xl leading-7 font-semibold tracking-[0.15%] ;  
+    @apply text-xl leading-7 font-semibold tracking-normal ;  
 }
 .desktop-button{
 @apply font-sans w-[332px] h-[69px] rounded-full py-10 px-4 ;
