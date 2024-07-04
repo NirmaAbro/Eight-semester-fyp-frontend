@@ -1,7 +1,7 @@
 import React from "react";
-import mission from "../mission.jpg";
-import vision from "../vision.jpg";
-import Image from "next/image";
+// import mission from "../mission.jpg";
+// import vision from "../vision.jpg";
+// import Image from "next/image";
 
 const Mission = () => {
   return (
@@ -24,12 +24,12 @@ const Mission = () => {
               development and socio-economic growth in Sindh and Pakistan.
             </p>
             <div className="border-4 border-blue-500 rounded-lg overflow-hidden">
-              <Image src={mission} alt="Mission" layout="responsive" />
+              {/* <Image src={mission} alt="Mission" layout="responsive" /> */}
             </div>
           </div>
           <div className="flex flex-col">
             <div className="border-4 border-blue-500 rounded-lg overflow-hidden mb-4">
-              <Image src={vision} alt="Vision" />
+              {/* <Image src={vision} alt="Vision" /> */}
             </div>
             <h2 className="text-4xl font-bold mb-4">
               Our <span className="text-blue-500">Vision</span>

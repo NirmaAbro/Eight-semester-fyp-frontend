@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import pic from "../picture.png";
+// import pic from "../picture.png";
 import { TiTick } from "react-icons/ti";
 
 const Who = () => {
@@ -8,11 +7,11 @@ const Who = () => {
     <>
       <div className="flex justify-center items-center mt-20 ">
         <div className="w-1/2 mt-20">
-          <Image
+          {/* <Image
             className="justify-center items-center m-auto w-1/2 h-1/2"
             src={pic}
             alt=""
-          />
+          /> */}
         </div>
         <div className="w-[50%] flex flex-col justify-center items-center">
           <div className="w-full mt-28">
