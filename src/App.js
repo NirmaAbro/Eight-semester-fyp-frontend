@@ -42,6 +42,7 @@ import AboutHero from "./AboutPage/AboutHero";
 import Menues from "./Components/Menues";
 import Singup from "./Components/Singup";
 import Premium from "./Components/Premium";
+import NotFound from "./Components/NotFound";
 
 function App() {
   return (
@@ -58,7 +59,11 @@ function App() {
           <Route path="/premium" element={<Premium />} />
           <Route path="/aboutus" element={<AboutHero />} />
           <Route path="/menues" element={<Menues />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
+        <HeroSection />
+        <Section2 />
+        <Section3 />
       </BrowserRouter>
     </div>
   );
