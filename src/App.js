@@ -1,36 +1,3 @@
-// import React from "react";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Navbar from "./Components/Navbar";
-// import HeroSection from "./Components/HeroSection";
-// import Section2 from "./Components/Section2";
-// import Section3 from "./Components/Section3";
-// import Sign from "./Components/Sign";
-// import AboutHero from "./AboutPage/AboutHero";
-// import Menues from "./Menues/Menues";
-
-// function App() {
-//   return (
-//     <div>
-//       <BrowserRouter>
-//         <Navbar />
-//         <Routes>
-//           <Route path="/" element={<HeroSection />} />
-//           <Route path="/home" element={<HeroSection />} />
-//           <Route path="/Section2" element={<Section2 />} />
-//           <Route path="/Section3" element={<Section3 />} />
-//           <Route path="/signin" element={<Sign />} />
-//           <Route path="/aboutus" element={<AboutHero />} />
-//           <Route path="/menues" element={<Menues />} />
-//         </Routes>
-//       </BrowserRouter>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-// gpt code
-
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
@@ -61,9 +28,6 @@ function App() {
           <Route path="/menues" element={<Menues />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
-        <HeroSection />
-        <Section2 />
-        <Section3 />
       </BrowserRouter>
     </div>
   );
