@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* mobile hero section headings  */
 
-.mobile-heading-one {
+/* .mobile-heading-one {
   @apply font-sans font-bold text-[22px] leading-7 text-white;
 }
 
@@ -13,8 +15,8 @@
  
 }
 
-.mobile-heading3span-twenty{
-  @apply font-sans font-semibold text-lg leading-5 tracking-normal text-white;
+.mobile-heading3span-twenty{ */
+/* @apply font-sans font-semibold text-lg leading-5 tracking-normal text-white;
   
 }
 .mobile-headingthree-hero {
@@ -27,7 +29,7 @@
 
 /* tablet hero section headings  */
 
-.tablet-heading-one{
+/* .tablet-heading-one{
     @apply font-sans font-bold text-[32px] leading-10;
 }
 
@@ -40,24 +42,24 @@
 }
 
 .tablet-heading3-hero{
-    @apply font-sans leading-4 font-semibold tracking-normal max-w-full;
-}
- /* .tablet-button-css{
+    @apply font-sans leading-4 font-semibold tracking-normal max-w-full; */
+/* }  */
+/* .tablet-button-css{
     @apply  w-[82px] h-5 py-2.5 px-3 gap-[5.03px] ;
  } */
 
 /* desktop hero section headings  */
 
-.desktop-htwo-headingone{
+/* .desktop-htwo-headingone{
 @apply font-sans font-bold text-6xl leading-[44px] tracking-tight ;
 }
 
 .desktop-Hsix-headingtwo{
-@apply font-sans font-semibold text-[34px] leading-9  ;
+@apply font-sans font-semibold text-[34px] leading-9  ; */
 /* tracking-0.25% */
-}
+/* } */
 
-.desktop-heading3-twenty{
+/* .desktop-heading3-twenty{
     @apply font-sans text-3xl leading-9 font-bold tracking-wide ;
 }
 .desktop-hsix-headingthree{
@@ -69,4 +71,4 @@
 
 .desktop-search-bar{
     @apply w-[836px] h-[83px] rounded-[51px] py-2.5 px-[21px] gap-64;
-}
+} */

@@ -8,6 +8,7 @@ import Menues from "./Components/Menues";
 import Singup from "./Components/Singup";
 import Premium from "./Components/Premium";
 import NotFound from "./Components/NotFound";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/menues" element={<Menues />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
