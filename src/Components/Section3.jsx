@@ -8,8 +8,8 @@ function Section3() {
   return (
     <>
       {/* Centered text */}
-      <div className="text-center lg:mt-20 justify-center m-10">
-        <h1 className="text-2xl md:text-4xl font-bold ">
+      <div className="text-center lg:mt-20 justify-center m-32">
+        <h1 className="text-2xl md:text-4xl font-bold mt-48  ">
           Smart Recipes, Healthier You, Personalized
         </h1>
       </div>

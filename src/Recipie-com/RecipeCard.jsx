@@ -8,6 +8,7 @@ const RecipeCard = ({ id, image, title, content }) => {
   };
 
   return (
+ 
     <div className="bg-white rounded-lg shadow-md overflow-hidden w-80 max-w-xs mb-4 m-8">
       <div className="relative">
         <img

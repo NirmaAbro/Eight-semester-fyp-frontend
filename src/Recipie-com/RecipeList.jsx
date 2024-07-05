@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import RecipeCard from "./RecipeCard";
 import img1 from "../images/Alogobi.jpeg";
 import img2 from "../images/PalakPaneer.jpeg";
@@ -35,7 +34,7 @@ const recipes = [
     image: img4,
     title: "Chana Masala",
     content:
-      "Chana Masala is a flavorful chickpea curry cooked in a tomato-based sauce with aromatic spices like coriander and garam masala, providing plant-based protein and beneficial antioxidants    ",
+      "Chana Masala is a flavorful chickpea curry cooked in a tomato-based sauce with aromatic spices like coriander and garam masala, providing plant-based protein and beneficial antioxidants",
   },
   {
     id: 5,
@@ -55,16 +54,21 @@ const recipes = [
 
 const RecipeList = () => {
   return (
-    <div className="flex flex-wrap justify-center ">
-      {recipes.map((recipe) => (
-        <RecipeCard
-          key={recipe.id}
-          id={recipe.id}
-          image={recipe.image}
-          title={recipe.title}
-          content={recipe.content}
-        />
-      ))}
+    <div className="m-4 mt-20 flex flex-col items-center">
+      <h1 className="text-5xl text-black m- font-sans font-bold m-28">
+        Learn About Healthier Food
+      </h1>
+      <div className="flex flex-wrap justify-center">
+        {recipes.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            id={recipe.id}
+            image={recipe.image}
+            title={recipe.title}
+            content={recipe.content}
+          />
+        ))}
+      </div>
     </div>
   );
 };
