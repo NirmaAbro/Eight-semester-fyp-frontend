@@ -54,21 +54,20 @@ const recipes = [
 
 const RecipeList = () => {
   return (
-    <div className="m-4 mt-20 flex flex-col items-center">
-      <h1 className="text-5xl text-black m- font-sans font-bold m-28">
+    <div className="m-4 mt-20 flex flex-wrap  items-center justify-center">
+      <h1 className=" text-2xl md:text-4xl lgtext-5xl text-black font-sans font-bold lg:m-28 whitespace-nowrap w-full justify-center text-center items-center">
         Learn About Healthier Food
       </h1>
-      <div className="flex flex-wrap justify-center">
-        {recipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            id={recipe.id}
-            image={recipe.image}
-            title={recipe.title}
-            content={recipe.content}
-          />
-        ))}
-      </div>
+
+      {recipes.map((recipe) => (
+        <RecipeCard
+          key={recipe.id}
+          id={recipe.id}
+          image={recipe.image}
+          title={recipe.title}
+          content={recipe.content}
+        />
+      ))}
     </div>
   );
 };
