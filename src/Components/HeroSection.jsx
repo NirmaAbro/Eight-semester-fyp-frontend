@@ -1,8 +1,12 @@
 import React from "react";
 import bg from "../images/girl2.png";
 import img from "../images/cover.jpg";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
+  function gotogetstart() {
+    console.log("button clicked");
+  }
   return (
     <div
       className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center px-8 overflow-hidden"
@@ -26,8 +30,12 @@ function HeroSection() {
           recipe recommendations. Achieve a healthier you with personalized
           nutrition plans.
         </h5>
-        <button className="bg-green-500 hover:bg-green-700 text-white font-bold md:py-2 md:px-4 p-2 rounded-full mt-8 lg:px-5 lg:py-3">
-          Get Started
+        <button
+          onClick={gotogetstart}
+          className="bg-green-500 cursor-pointer hover:bg-green-700 text-white font-bold md:py-2 md:px-4 p-2 rounded-full mt-8 lg:px-5 lg:py-3"
+        >
+          {/* <Link to="/getstarted">Get Started</Link> */}
+          get started
         </button>
       </div>
 

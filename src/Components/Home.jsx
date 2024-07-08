@@ -9,6 +9,7 @@ import { handleSuccess } from "./utils"; //i just need this function thats why i
 import { ToastContainer } from "react-toastify";
 import { useState } from "react";
 import { useEffect } from "react";
+import Approach from "./Approach";
 
 function Home() {
   const [loggedInUser, setLoggedInUser] = useState("");
@@ -28,12 +29,13 @@ function Home() {
 
   return (
     <>
-      <h1>Welcome {loggedInUser}</h1>
+      <h1 className=" text-black">Welcome {loggedInUser}</h1>
       <button onClick={handleLogout}>Logout</button>
       <HeroSection />
       <Section2 />
       <Section3 />
       <RecipeList />
+      <Approach />
       <ToastContainer />
     </>
   );
