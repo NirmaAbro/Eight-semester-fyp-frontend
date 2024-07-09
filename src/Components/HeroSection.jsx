@@ -1,12 +1,20 @@
-import React from "react";
+// import React from "react";
 import bg from "../images/girl2.png";
 import img from "../images/cover.jpg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate,NavLink } from "react-router-dom";
+// import Getstarted from "../GetStart/Getstarted";
+// import Button from "./Button";
 
 function HeroSection() {
-  function gotogetstart() {
-    console.log("button clicked");
-  }
+  const navigate = useNavigate();
+
+  const handleGetStartedClick = () => {
+    console.log("Get Started button clicked");
+    navigate("/getstarted");
+    // <Getstarted />;
+  };
+
   return (
     <div
       className="relative w-full h-screen bg-cover bg-center flex flex-col items-center justify-center px-8 overflow-hidden"
@@ -15,9 +23,7 @@ function HeroSection() {
       {/* Gradient overlay for a subtle and visually appealing effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 to-transparent"></div>
 
-      <div className="sm:max-w-md text-center justify-center items-start text-white p-3 m-2 order-2 lg:order-1">
-        {/* <h1 className="lg:text-4xl sm:text-3xl sm:leading-8 font-sans font-bold text-xl leading-7 mt-9 text-center"></h1>
-        <h3 className="lg:text-xl sm:text-base sm:mt-4 sm:leading-relaxed"></h3> */}
+      <div className="sm:max-w-md text-center justify-center items-start text-white p-3 m-2 order-2 lg:order-1 cursor-pointer">
         <h1
           className="font-sans font-bold text-xl leading-7 mt-9 text-start  
                sm:text-3xl sm:leading-10 sm:whitespace-nowrap 
@@ -30,13 +36,20 @@ function HeroSection() {
           recipe recommendations. Achieve a healthier you with personalized
           nutrition plans.
         </h5>
-        <button
-          onClick={gotogetstart}
-          className="bg-green-500 cursor-pointer hover:bg-green-700 text-white font-bold md:py-2 md:px-4 p-2 rounded-full mt-8 lg:px-5 lg:py-3"
-        >
-          {/* <Link to="/getstarted">Get Started</Link> */}
-          get started
-        </button>
+        {/* <Link to="/getstarted" className="bg-green-500 cursor-pointer hover:bg-green-700 text-white font-bold md:py-2 md:px-4 p-2 rounded-full mt-8 lg:px-5 lg:py-3" >Get Started</Link> */}
+
+        <div className="justify-center items-center">
+          {/* <button
+            onClick={handleclicked}
+            className="bg-green-500 text-white font-bold md:py-2 md:px-4 p-2 rounded-full mt-8 lg:px-5 lg:py-3 cursor-pointer"
+          >
+            <Link to="/getstarted"> get started </Link>
+          </button> */}
+          <button
+            onClick={handleGetStartedClick}
+            className="bg-green-500 text-white font-bold md:py-2 md:px-4 p-2 rounded-full mt-8 lg:px-5 lg:py-3 cursor-pointer"
+          > <NavLink to="/getstarted"> get started </NavLink></button>
+        </div>
       </div>
 
       {/* Improved image placement and styling for better focus */}

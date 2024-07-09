@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isAboutHovered, setIsAboutHovered] = useState(false);
 
   const handleMenu = () => {
     setIsNavOpen(!isNavOpen);
@@ -37,46 +36,21 @@ function Navbar() {
           >
             About Us
           </NavLink>
-          <div
-            onMouseEnter={() => setIsAboutHovered(true)}
-            onMouseLeave={() => setIsAboutHovered(false)}
-            className="relative"
-          >
+          <div>
             <NavLink
-              to="/menues"
+              to="/getstarted"
+              className="text-lg font-medium text-white hover:border-b-2 hover:border-green-700 pr-4"
+            >
+              Get Start
+            </NavLink>
+
+            <NavLink
+              to="/premium"
               className="text-lg font-medium text-white hover:border-b-2 hover:border-green-700"
             >
-              Menues
+              Premium
             </NavLink>
-            {isAboutHovered && (
-              <div className="absolute left-0 top-full mt-2 w-48 text-white shadow-lg rounded">
-                <NavLink
-                  to="/menu1"
-                  className="block px-4 py-2 hover:border-b-2 hover:border-green-700"
-                >
-                  Menu 1
-                </NavLink>
-                <NavLink
-                  to="/menu2"
-                  className="block px-4 py-2 hover:border-b-2 hover:border-green-700"
-                >
-                  Menu 2
-                </NavLink>
-                <NavLink
-                  to="/menu3"
-                  className="block px-4 py-2 hover:border-b-2 hover:border-green-700"
-                >
-                  Menu 3
-                </NavLink>
-              </div>
-            )}
           </div>
-          <NavLink
-            to="/premium"
-            className="text-lg font-medium text-white hover:border-b-2 hover:border-green-700"
-          >
-            Premium
-          </NavLink>
         </div>
 
         <div className="m-3 lg:flex hidden">
@@ -135,10 +109,10 @@ function Navbar() {
                   About Us
                 </NavLink>
                 <NavLink
-                  to="/menues"
+                  to="/getstarted"
                   className="text-lg font-sans text-white hover:bg-white hover:text-black"
                 >
-                  Menues
+                  Get Start
                 </NavLink>
                 <NavLink
                   to="/premium"

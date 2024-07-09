@@ -34,25 +34,25 @@ const Footer = () => {
             />
             <h2 className="text-lg font-bold mt-4">Connect With Us</h2>
             <div className="flex mt-2 space-x-4">
-              <a href={instagramUrl} target="_blank" aria-label="Instagram">
+              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className="text-green-600 text-2xl"
                 />
               </a>
-              <a href={facebookUrl} aria-label="Facebook" target="_blank">
+              <a href={facebookUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-green-600 text-2xl"
                 />
               </a>
-              <a href={linkedinUrl} aria-label="LinkedIn" target="_blank">
+              <a href={linkedinUrl} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   className="text-green-600 text-2xl"
                 />
               </a>
-              <a href={twitterUrl} aria-label="Twitter" target="_blank">
+              <a href={twitterUrl} aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon
                   icon={faTwitter}
                   className="text-green-600 text-2xl"

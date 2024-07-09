@@ -1,12 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const Button = (props) => {
-  return (
-    <button className='bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-400 
-    duration-500'>
-      {props.children}
-    </button>
-  )
-}
+  function getstarted() {
+    console.log("button clicked");
+  }
 
-export default Button
+  return (
+    <button
+      onClick={getstarted}
+      className="bg-green-500 hover:bg-green-700 text-white font-bold md:py-2 md:px-4 p-2 rounded-full mt-8 lg:px-5 lg:py-3 cursor-pointer"
+    >
+      {props.getstart}
+    </button>
+  );
+};
+
+export default Button;
