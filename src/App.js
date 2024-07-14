@@ -10,6 +10,7 @@ import Singup from "./Components/Singup";
 import Premium from "./Components/Premium";
 import NotFound from "./Components/NotFound";
 import Footer from "./Components/Footer";
+import BlogPage from "./Components/BlogPage";
 import RefrshHandler from "./Components/RefrshHandler";
 import Getstarted from "./GetStart/Getstarted";
 import { useState } from "react";
@@ -37,6 +38,7 @@ function App() {
           <Route path="/aboutus" element={<AboutHome />} />
           <Route path="/menues" element={<Menues />} />
           <Route path="/getstarted" element={<Getstarted />} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -45,10 +45,10 @@ function Navbar() {
             </NavLink>
 
             <NavLink
-              to="/premium"
+              to="/blog"
               className="text-lg font-medium text-white hover:border-b-2 hover:border-green-700"
             >
-              Premium
+            Blog
             </NavLink>
           </div>
         </div>
@@ -115,10 +115,10 @@ function Navbar() {
                   Get Start
                 </NavLink>
                 <NavLink
-                  to="/premium"
+                  to="/blog"
                   className="text-lg font-sans text-white hover:bg-white hover:text-black"
                 >
-                  Premium
+                Blog
                 </NavLink>
                 <NavLink
                   to="/signin"
