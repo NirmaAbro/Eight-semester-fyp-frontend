@@ -30,8 +30,8 @@ export const generateDietPlan = async ({
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "api-key": process.env.REACT_APP_OPENAI_API_KEY,
+        // "Content-Type": "application/json", //just ya uncomment krna jab API use kro to ya jabhi comment ki taky koe api use na krsky
+        //  "api-key": process.env.REACT_APP_OPENAI_API_KEY,  // just ya uncomment krna jab API use kro to ya jabhi comment ki taky koe api use na krsky 
       },
       body: JSON.stringify({
         prompt: prompt,
