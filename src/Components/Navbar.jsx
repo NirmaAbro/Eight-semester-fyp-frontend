@@ -45,10 +45,10 @@ function Navbar() {
             </NavLink>
 
             <NavLink
-              to="/blog"
+              to="/feedback"
               className="text-lg font-medium text-white hover:border-b-2 hover:border-green-700"
             >
-            Blog
+            Feedback
             </NavLink>
           </div>
         </div>
@@ -115,10 +115,10 @@ function Navbar() {
                   Get Start
                 </NavLink>
                 <NavLink
-                  to="/blog"
+                  to="/feedback"
                   className="text-lg font-sans text-white hover:bg-white hover:text-black"
                 >
-                Blog
+                Feedback
                 </NavLink>
                 <NavLink
                   to="/signin"

@@ -23,7 +23,9 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
+    "react-stars": "^2.2.5",
     "react-toastify": "^10.0.5",
+    "sentiment": "^5.0.2",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
