@@ -2,13 +2,36 @@ import React, { useState } from "react";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { IoMdCloseCircle } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { handleSuccess } from "./utils";
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleMenu = () => {
     setIsNavOpen(!isNavOpen);
+  };
+
+  // logout functionality
+  const [loggedInUser, setLoggedInUser] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = localStorage.getItem("loggedInUser");
+    if (user) {
+      setLoggedInUser(user);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("loggedInUser");
+    setLoggedInUser(""); // Update state to reflect logged out state
+    handleSuccess("User Logged Out");
+    setTimeout(() => {
+      navigate("/signin"); // Navigate to signin page after logout
+    }, 1000);
   };
 
   return (
@@ -48,23 +71,38 @@ function Navbar() {
               to="/feedback"
               className="text-lg font-medium text-white hover:border-b-2 hover:border-green-700"
             >
-            Feedback
+              Feedback
             </NavLink>
           </div>
         </div>
 
         <div className="m-3 lg:flex hidden">
           {/* Sign in */}
-          <button className="bg-green-800 hover:border-b-2 hover:border-green-500 m-2 hover:bg-green-700 text-white font-bold py-1 px-2 rounded">
+          <button className="bg-green-800 hover:border-b-2 hover:border-green-500 m-2 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-full">
             <NavLink to="/signin">SignIn</NavLink>
           </button>
           {/* Sign up */}
-          <button
+          {loggedInUser ? (
+            <button
+              onClick={handleLogout}
+              className="bg-green-800 hover:border-b-2 hover:border-green-500 m-2 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-full"
+            >
+              Logout
+            </button>
+          ) : (
+            <button
+              onclick={console.log("signup clicked ")}
+              className="bg-green-800 hover:bg-green-700 m-2 text-white font-bold py-1 px-2 rounded-full"
+            >
+              <NavLink to="/signup">SignUp</NavLink>
+            </button>
+          )}
+          {/* <button
             onclick={console.log("signup clicked ")}
-            className="bg-green-800 hover:bg-green-700 m-2 text-white font-bold py-1 px-2 rounded"
+            className="bg-green-800 hover:bg-green-700 m-2 text-white font-bold py-1 px-2 rounded-full"
           >
             <NavLink to="/signup">SignUp</NavLink>
-          </button>
+          </button> */}
         </div>
 
         {/* Menu button */}
@@ -118,7 +156,7 @@ function Navbar() {
                   to="/feedback"
                   className="text-lg font-sans text-white hover:bg-white hover:text-black"
                 >
-                Feedback
+                  Feedback
                 </NavLink>
                 <NavLink
                   to="/signin"

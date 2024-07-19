@@ -13,6 +13,7 @@ import Footer from "./Components/Footer";
 import SentiHome from "./Sentiment/SentiHome";
 import RefrshHandler from "./Components/RefrshHandler";
 import Getstarted from "./GetStart/Getstarted";
+import UpperNav from "./Components/UpperNav";
 import { useState } from "react";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <div>
       <BrowserRouter>
         <RefrshHandler setIsAuthenticated={setIsAuthenticated} />
+        <UpperNav />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -34,7 +36,6 @@ function App() {
           <Route path="/signin" element={<Sign />} />
           <Route path="/signup" element={<Singup />} />
           <Route path="/premium" element={<Premium />} />
-          {/* <Route path="/aboutus" element={<AboutHero />} /> */}
           <Route path="/aboutus" element={<AboutHome />} />
           <Route path="/menues" element={<Menues />} />
           <Route path="/getstarted" element={<Getstarted />} />

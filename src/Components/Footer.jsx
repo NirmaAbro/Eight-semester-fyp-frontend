@@ -11,7 +11,8 @@ import {
   faPhone,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../images/logo.jpeg";
+import { IoFastFood } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   // Define URLs for each social media platform
@@ -25,34 +26,55 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full sm:w-1/2 lg:w-1/4 mb-6">
-            <img
+            {/* <img
               src={logo}
               alt="Logo"
               width={150}
               height={50}
               className="mix-blend-multiply  rounded-full"
-            />
+            /> */}
+            <IoFastFood className="text-6xl lg:text-8xl  rounded-full p-1" />
             <h2 className="text-lg font-bold mt-4">Connect With Us</h2>
             <div className="flex mt-2 space-x-4">
-              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className="text-green-600 text-2xl"
                 />
               </a>
-              <a href={facebookUrl} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <a
+                href={facebookUrl}
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="text-green-600 text-2xl"
                 />
               </a>
-              <a href={linkedinUrl} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <a
+                href={linkedinUrl}
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   className="text-green-600 text-2xl"
                 />
               </a>
-              <a href={twitterUrl} aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <a
+                href={twitterUrl}
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon
                   icon={faTwitter}
                   className="text-green-600 text-2xl"
@@ -69,14 +91,27 @@ const Footer = () => {
               <li>Recipe Customization</li>
             </ul>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4 mb-6">
+          <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 cursor-pointer ">
             <h2 className="text-lg font-bold">Pages</h2>
-            <ul className="mt-4 space-y-2">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Recipes</li>
-            </ul>
+            <NavLink to="/" className="text-base font-sans block mt-4 ">
+              Home
+            </NavLink>
+            <NavLink to="/aboutus" className="text-base font-sans block mt-2 ">
+              About Us
+            </NavLink>
+            <NavLink to="/getstarted" className="text-base font-sans block mt-2 ">
+              Get Start
+            </NavLink>
+            <NavLink to="/feedback" className="text-base font-sans block mt-2 ">
+              Feedback
+            </NavLink>
+          
+            {/* <ul className="mt-4 space-y-2">
+              <li >Home</li>
+              <li onClick={"/aboutus"} className="cursor-pointer">About Us</li>
+              <li>Get Started</li>
+              <li>Feedback</li>
+            </ul> */}
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4 mb-6">
             <h2 className="text-lg font-bold">Contact Information</h2>
