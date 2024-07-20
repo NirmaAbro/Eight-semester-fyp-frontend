@@ -86,15 +86,14 @@ export const generateDietPlans = async ({
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json", //just ya uncomment krna jab API use kro to ya jabhi comment ki taky koe api use na krsky
-        "api-key": process.env.REACT_APP_OPENAI_API_KEY,
+        // "Content-Type": "application/json", //just ya uncomment krna jab API use kro to ya jabhi comment ki taky koe api use na krsky
+        // "api-key": process.env.REACT_APP_OPENAI_API_KEY,
         //  just ya uncomment krna jab API use kro to ya jabhi comment ki taky koe api use na krsky
       },
       body: JSON.stringify({
         prompt: prompt,
         temperature: 0.5,
-        // max_tokens: 300, // Increased max_tokens to get more detailed responses for two plans
-        max_tokens: 8, 
+        max_tokens: 300, // Increased max_tokens to get more detailed responses for two plans
         n: 2, // Generate two completions
       }),
     });

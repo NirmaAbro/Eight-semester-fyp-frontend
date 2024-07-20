@@ -16,9 +16,6 @@ function Feedback() {
           Diet Plan and Recipe Recommendation Engine has helped you.
         </h6>
       </div>
-      {/* sentiment analysis here */}
-
-      
     </div>
   );
 }
