@@ -76,9 +76,13 @@ function Getstarted() {
     try {
       const plans = await generateDietPlans(formData);
       setDietPlans(plans);
+      console.log(plans);
     } catch (error) {
       console.error("Error generating diet plans:", error);
     }
+  };
+  const consolecheck = () => {
+    console.log("click button");
   };
 
   return (
@@ -210,8 +214,10 @@ function Getstarted() {
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
+            onClick={consolecheck}
           >
             Get Diet Plans
+            
           </button>
         </form>
       </div>

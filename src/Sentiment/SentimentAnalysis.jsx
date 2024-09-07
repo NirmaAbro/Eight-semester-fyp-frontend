@@ -4,12 +4,26 @@ import StarRatings from "react-stars";
 import { MdSend } from "react-icons/md";
 
 const sentimentScores = {
-  'Marvelous': 5,
-  'Excellent': 4,
-  'Very Good': 3,
+
+  'Very Negative': -5,
+  'Extremely Negative': -5,
+  'Negative': -3,
+  'Bad': -2,
+  'Very Bad': -3,
+  'Horrible': -5,
+  'Terrible': -5,
+  'Awful': -5,
+  'Badly': -2,
+  'Terribly': -2,
+  'Neutral': 0,
   'Good': 2,
-  'Bad': 1,
-  'Negative': 0,
+  'Very Good': 3,
+  'Okay': 2,
+  'Positive': 4,
+  'Excellent': 4,
+  'Marvelous': 5,
+  'Awesome': 5,
+  'Extremely Positive': 5,
 };
 
 const SentimentAnalysis = () => {
@@ -24,20 +38,38 @@ const SentimentAnalysis = () => {
 
     setSentimentScore(result.score);
 
+    // let label = "Neutral";
+    // if (result.score > 3) {
+    //   label = "Marvelous";
+    // } else if (result.score > 1) {
+    //   label = "Excellent";
+    // } else if (result.score > 0) {
+    //   label = "Very Good";
+    // } else if (result.score === 0) {
+    //   label = "Good";
+    // } else if (result.score < -1) {
+    //   label = "Bad";
+    // } else {
+    //   label = "Negative";
+    // }
+
+
     let label = "Neutral";
-    if (result.score > 3) {
-      label = "Marvelous";
-    } else if (result.score > 1) {
-      label = "Excellent";
-    } else if (result.score > 0) {
-      label = "Very Good";
-    } else if (result.score === 0) {
-      label = "Good";
-    } else if (result.score < -1) {
-      label = "Bad";
-    } else {
-      label = "Negative";
-    }
+  if (result.score >= 5) {
+    label = "Marvelous";
+  } else if (result.score >= 4) {
+    label = "Excellent";
+  } else if (result.score >= 3) {
+    label = "Very Good";
+  } else if (result.score >= 2) {
+    label = "Good";
+  } else if (result.score >= 0) {
+    label = "Neutral";
+  } else if (result.score >= -2) {
+    label = "Bad";
+  } else {
+    label = "Negative";
+  }
 
     setSentimentLabel(label);
     setRating(sentimentScores[label]);

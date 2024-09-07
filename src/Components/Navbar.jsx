@@ -40,7 +40,7 @@ function Navbar() {
         <div className="flex items-center mt-2">
           <IoFastFoodSharp className="text-5xl p-2 bg-green-500 rounded-full" />
           <span className="text-xl font-semibold m-2 font-sans">
-            SmartPalate
+            SmartPlate
           </span>
         </div>
 
@@ -126,7 +126,7 @@ function Navbar() {
                 <NavLink to="#" id="brand" className="flex items-center">
                   <IoFastFoodSharp className="text-green-500 text-4xl rounded-full" />
                   <span className="text-xl font-sans text-white hover:border-b-2 hover:border-green-500">
-                    SmartPalate
+                    SmartPlate
                   </span>
                 </NavLink>
                 <button onClick={handleMenu}>
