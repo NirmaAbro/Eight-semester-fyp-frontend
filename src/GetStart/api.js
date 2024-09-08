@@ -16,7 +16,7 @@ export const generateDietPlans = async ({
       - Age: ${age}
       - Gender: ${gender}
       - Weight: ${weight} kg
-      - Height: ${height} cm
+      - Height: ${height} feet
       - Activity Level: ${activityLevel}
       - Dietary Preference: ${dietaryPreference}
       - Goal: ${goal}
