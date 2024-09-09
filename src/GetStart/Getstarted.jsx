@@ -75,6 +75,35 @@ function Getstarted() {
     e.preventDefault();
     try {
       const plans = await generateDietPlans(formData);
+
+      console.log(plans);
+
+      console.log(formData);
+      const requestBody = {
+        name: formData.name,
+        age: formData.age,
+        gender: formData.gender,
+        weight: formData.weight,
+        height: formData.height,
+        activityLevel: formData.activityLevel,
+        dietaryPreference: formData.dietaryPreference,
+        goal: formData.goal,
+        illness: formData.illness,
+        planDetails:  plans[0],
+      };
+
+      // console.log(plans);
+
+      const response = await fetch("http://localhost:8080/api/diet-plans", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      console.log(response);
+
       setDietPlans(plans);
       console.log(plans);
     } catch (error) {
