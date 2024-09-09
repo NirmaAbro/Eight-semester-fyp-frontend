@@ -89,7 +89,9 @@ function Getstarted() {
         dietaryPreference: formData.dietaryPreference,
         goal: formData.goal,
         illness: formData.illness,
-        planDetails:  plans[0],
+        // planDetails:  plans[0],
+        responseone:plans[0],
+        responsetwo: plans[1],
       };
 
       // console.log(plans);
