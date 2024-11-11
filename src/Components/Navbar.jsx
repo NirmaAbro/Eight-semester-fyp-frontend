@@ -3,11 +3,19 @@ import { IoFastFoodSharp } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { IoMdCloseCircle } from "react-icons/io";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { handleSuccess } from "./utils";
+import { AuthContext } from "../context/AuthContext";
+import { Dropdown, Menu, Button } from "antd";
+import { UserOutlined } from "@ant-design/icons";
+import MyDietPlan from "../pages/MyDietPlan";
+
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { user, isAuthenticated, signOut } = useContext(AuthContext);
+
+  console.log(user, "user here");
 
   const handleMenu = () => {
     setIsNavOpen(!isNavOpen);
@@ -24,6 +32,35 @@ function Navbar() {
     }
   }, []);
 
+  const menu = (
+    <Menu>
+      {isAuthenticated ? (
+        <>
+          <Menu.Item key="1" icon={<UserOutlined />}>
+            <NavLink to="/profile">Profile</NavLink>
+          </Menu.Item>
+          <Menu.Item key="2">
+          <NavLink to="/mydietplane">My Diet Plan</NavLink>
+          </Menu.Item>
+          <Menu.Item key="3">
+          <NavLink to="/settings">Settings</NavLink></Menu.Item>
+          <Menu.Item key="4" danger onClick={signOut}>
+            Logout
+          </Menu.Item>
+        </>
+      ) : (
+        <>
+          <Menu.Item key="1">
+            <NavLink to="/signin">Sign In</NavLink>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <NavLink to="/signup">Sign Up</NavLink>
+          </Menu.Item>
+        </>
+      )}
+    </Menu>
+  );
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("loggedInUser");
@@ -33,6 +70,7 @@ function Navbar() {
       navigate("/signin"); // Navigate to signin page after logout
     }, 1000);
   };
+  console.log(user);
 
   return (
     <>
@@ -73,36 +111,24 @@ function Navbar() {
             >
               Feedback
             </NavLink>
+
+            {/* <NavLink
+              to="/mydietplane"
+              className="text-lg font-medium text-white hover:border-b-2 hover:border-green-700"
+            >
+            mydietplane
+            </NavLink> */}
           </div>
         </div>
 
         <div className="m-3 lg:flex hidden">
-          {/* Sign in */}
-          <button className="bg-green-800 hover:border-b-2 hover:border-green-500 m-2 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-full">
-            <NavLink to="/signin">SignIn</NavLink>
-          </button>
-          {/* Sign up */}
-          {loggedInUser ? (
-            <button
-              onClick={handleLogout}
-              className="bg-green-800 hover:border-b-2 hover:border-green-500 m-2 hover:bg-green-700 text-white font-bold py-1 px-2 rounded-full"
-            >
-              Logout
-            </button>
-          ) : (
-            <button
-              onclick={console.log("signup clicked ")}
-              className="bg-green-800 hover:bg-green-700 m-2 text-white font-bold py-1 px-2 rounded-full"
-            >
-              <NavLink to="/signup">SignUp</NavLink>
-            </button>
-          )}
-          {/* <button
-            onclick={console.log("signup clicked ")}
-            className="bg-green-800 hover:bg-green-700 m-2 text-white font-bold py-1 px-2 rounded-full"
-          >
-            <NavLink to="/signup">SignUp</NavLink>
-          </button> */}
+          <Dropdown overlay={menu} trigger={["click"]}>
+            <Button className="flex items-center">
+              <UserOutlined className="mr-2" />
+
+              {isAuthenticated ? user?.name && user?.name : "Account"}
+            </Button>
+          </Dropdown>
         </div>
 
         {/* Menu button */}
@@ -126,7 +152,7 @@ function Navbar() {
                 <NavLink to="#" id="brand" className="flex items-center">
                   <IoFastFoodSharp className="text-green-500 text-4xl rounded-full" />
                   <span className="text-xl font-sans text-white hover:border-b-2 hover:border-green-500">
-                    SmartPlate
+                    SmartPlate Market
                   </span>
                 </NavLink>
                 <button onClick={handleMenu}>

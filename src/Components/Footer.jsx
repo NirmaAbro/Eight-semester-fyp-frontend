@@ -142,8 +142,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-8 text-white text-sm bg-green-600 w-full py-5">
-        Copyright © 2022 Your Website. All rights reserved. Powered by Minosofts
-        Cooperation
+        Copyright © 2024 Your Website. All rights reserved.
       </div>
     </footer>
   );

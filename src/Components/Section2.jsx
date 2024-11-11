@@ -33,7 +33,7 @@ function Section2() {
 
         <p className="md:text-base text-xs  mb-2 tracking-wide">
           Discover meals tailored to your health goals with our intelligent
-          recipe recommendations.
+          Diet Plan recommendation Engine.
         </p>
         <p className="md:text-base text-xs  mb-2 tracking-wide">
           Achieve a healthier you with personalized nutrition plans. Our

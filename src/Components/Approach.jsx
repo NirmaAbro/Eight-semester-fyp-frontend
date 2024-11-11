@@ -73,7 +73,7 @@ const Approach = () => {
     {
       title: "Personalized Recommendations",
       description:
-        "Our recipe recommendation engine offers personalized meal suggestions based on your dietary preferences, health goals, and culinary interests. Whether you're looking for healthy options.",
+        "Our diet plan recommendation engine offers personalized meal suggestions based on your dietary preferences, health goals, and culinary interests. Whether you're looking for healthy options.",
     },
     {
       title: "Nutritionally Balanced Plans",
@@ -91,10 +91,10 @@ const Approach = () => {
   return (
     <div className="container mx-auto px-4 py-8 overflow-hidden">
       {/* Add 'overflow-hidden' class to prevent scrollbar */}
-      <h2 className="text-5xl font-bold mb-4 text-start">
+      <h2 className="text-4xl font-bold mb-4 text-start">
         Our <span className="text-green-700">Approach</span>
       </h2>
-      <p className="text-start mb-8 text-xl font-semibold">
+      <p className="text-start mb-8 text-base font-semibold">
         Our approach is centered around delivering a seamless and enjoyable
         experience for discovering and preparing meals that meet your specific
         preferences and dietary needs. Here's an overview of our approach:

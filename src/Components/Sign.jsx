@@ -2,9 +2,13 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "./utils";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { MessagesPage } from "openai/resources/beta/threads/messages.mjs";
+import { message } from "antd";
 
 function Sign() {
+  const { login } = useContext(AuthContext);  
   const [loginInfo, setLoginInfo] = useState({
     email: "",
     password: "",
@@ -21,39 +25,21 @@ function Sign() {
   };
 
   const handleLogin = async (e) => {
-    e.preventDefault();
     const { email, password } = loginInfo;
-    if (!email || !password) {
-      return handleError("Email and password are required");
-    }
     try {
-      // const url = `https://deploy-mern-app-1-api.vercel.app/auth/login`;  youtube
-      const url = `http://localhost:8080/auth/login`;
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginInfo),
-      });
-      const result = await response.json();
-      const { success, message, jwtToken, name, error } = result;
-      if (success) {
-        handleSuccess(message);
-        localStorage.setItem("token", jwtToken);
-        localStorage.setItem("loggedInUser", name);
-        setTimeout(() => {
-          navigate("/home");
-        }, 1000);
-      } else if (error) {
-        const details = error?.details[0].message;
-        handleError(details);
-      } else if (!success) {
-        handleError(message);
+      e.preventDefault();
+      const response = await login(loginInfo);
+      // await login(loginInfo);
+      console.log(response, "login wala console");
+      if (response) {
+        navigate("/");
+      message.success("login successfulyy");
+      }else if (response == undefined ){
+        message.error(" response undefine");
       }
-      console.log(result);
-    } catch (err) {
-      handleError(err);
+    } catch (error) {
+      console.log(error, "error occur");
+      message.error(" bad condition");
     }
   };
 

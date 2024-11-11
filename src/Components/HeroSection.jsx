@@ -19,11 +19,11 @@ function HeroSection() {
 
       <div className="sm:max-w-md text-center justify-center items-start text-white p-3 m-2 order-2 lg:order-1 cursor-pointer">
         <h1 className="font-sans font-bold text-xl leading-7 mt-9 text-start sm:text-3xl sm:leading-10 sm:whitespace-nowrap md:font-extrabold md:-tracking-tight md:text-2xl md:leading-10 md:mt-24 lg:text-4xl">
-          Smart Recipes, Healthier You, Personalized
+          Smart Diet plan, Healthier You, Personalized
         </h1>
         <h5 className="sm:text-base sm:leading-6 text-start sm:tracking-wider sm:m-2 text-xs md:text-xl md:mt-7 md:tracking-wide font-semibold">
           Discover meals tailored to your health goals with our intelligent
-          recipe recommendations. Achieve a healthier you with personalized
+          Diet plane recommendation Engine. Achieve a healthier you with personalized
           nutrition plans.
         </h5>
 
@@ -47,11 +47,11 @@ function HeroSection() {
       </div>
 
       {/* Image placement and styling */}
-      <img
+      {/* <img
         src={bg}
         alt="Person using app"
         className="lg:absolute lg:inset-y-1/2 lg:right-0 lg:w-1/3 lg:h-auto lg:object-cover hidden lg:block rounded-lg shadow-lg sm:w-1/2 sm:h-1/2"
-      />
+      /> */}
     </div>
   );
 }

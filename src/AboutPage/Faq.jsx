@@ -3,9 +3,9 @@ import React, { useState } from "react";
 
 const faqData = [
   {
-    question: "Q1: How does the recipe recommendation engine work?",
+    question: "Q1: How does the diet plane recommendation engine work?",
     answer:
-      "Our recipe recommendation engine uses your personal information, such as dietary preferences, health goals, and nutritional needs, to suggest recipes that best suit you.",
+      "Our diet plan recommendation engine uses your personal information, such as dietary preferences, health goals, and nutritional needs, to suggest diet plane that best suit you.",
   },
   {
     question: "Q2: Can I customize my diet plan?",
@@ -19,9 +19,9 @@ const faqData = [
   },
   {
     question:
-      "Q4: Are the recipes suitable for people with specific health conditions?",
+      "Q4: Are the diet plans issuitable for people with specific health conditions?",
     answer:
-      "Absolutely. We take into account any health conditions you have mentioned in your profile, and our engine recommends recipes that are safe and beneficial for you.",
+      "Absolutely. We take into account any health conditions you have mentioned in your input fields , and our engine recommends diet plane that are safe and beneficial for you.",
   },
 ];
 

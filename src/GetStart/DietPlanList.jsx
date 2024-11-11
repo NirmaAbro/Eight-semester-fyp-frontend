@@ -42,6 +42,9 @@ function DietPlanList({ dietPlans, selectedPlan, setSelectedPlan }) {
     doc.save("SelectedDietPlan.pdf");
   };
 
+  // create profile 
+  
+
   return (
     <div className="mt-6 space-y-4 w-full m-4">
       <h3 className="text-xl font-bold mb-2 block">Generated Diet Plans</h3>
@@ -67,6 +70,11 @@ function DietPlanList({ dietPlans, selectedPlan, setSelectedPlan }) {
           >
             Download Selected Plan as PDF
           </button>
+          {/* create profile  */}
+          {/* <button type="button" onClick={handleuserProfilepagesavedata}>
+            Create Profile
+          </button> */}
+
           <div className="flex items-center justify-center mt-2 mx-5">
             <button
               onClick={toggleSpeech}

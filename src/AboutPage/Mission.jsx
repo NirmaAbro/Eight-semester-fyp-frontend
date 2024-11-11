@@ -20,11 +20,12 @@ const Mission = () => {
               Our <span className="text-green-700">Mission</span>
             </h2>
             <p className="mb-4 max-w-[100]">
-              Welcome to our recipe recommendation engine! Our mission is to
-              provide you with personalized and nutritious meal options that
-              cater to your dietary preferences and health goals. We aim to make
-              cooking enjoyable and health-conscious by offering recipes that
-              are easy to prepare and delicious to taste.
+              Our mission is to empower individuals to achieve their health
+              goals through intelligent, data-driven diet recommendations. By
+              leveraging artificial intelligence, we aim to offer personalized
+              meal plans that cater to unique dietary preferences, health
+              conditions, and nutritional requirements, ensuring a seamless,
+              user-friendly experience on our platform, SmartPlate Market.
             </p>
           </div>
         </div>
@@ -43,11 +44,9 @@ const Mission = () => {
               Our <span className="text-green-700">Vision</span>
             </h2>
             <p className="mb-4 max-w-[100]">
-              Our vision is to become your go-to platform for discovering new
-              recipes, learning about nutrition, and embracing a healthy
-              lifestyle through our curated selection of meal plans and cooking
-              tips. We aspire to empower individuals to make informed food
-              choices and achieve their wellness goals effortlessly.
+              To revolutionize personalized nutrition by providing easy to get
+              diet plane, AI-driven diet plans that promote healthy living and
+              long-term wellness for people of all lifestyles and dietary needs.
             </p>
           </div>
         </div>

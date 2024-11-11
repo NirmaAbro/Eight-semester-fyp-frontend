@@ -13,7 +13,7 @@ function AboutHero() {
         </h1>
         <h6 className="text-white text-lg lg:text-2xl font-semibold">
           Discover personalized diet plans tailored to your needs with our
-          advanced recipe recommendation engine.
+          advanced diet plane recommendation engine.
         </h6>
       </div>
     </div>

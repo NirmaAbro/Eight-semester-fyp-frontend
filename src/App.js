@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Sign from "./Components/Sign";
-// import AboutHero from "./AboutPage/AboutHero";
 import AboutHome from "./AboutPage/AboutHome";
 import Menues from "./Components/Menues";
 import Singup from "./Components/Singup";
@@ -15,6 +14,9 @@ import RefrshHandler from "./Components/RefrshHandler";
 import Getstarted from "./GetStart/Getstarted";
 import UpperNav from "./Components/UpperNav";
 import { useState } from "react";
+import MyDietPlan from "./pages/MyDietPlan";
+import Settings from "./pages/Settings";
+import Profile from "./pages/Profile";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -40,6 +42,9 @@ function App() {
           <Route path="/menues" element={<Menues />} />
           <Route path="/getstarted" element={<Getstarted />} />
           <Route path="/feedback" element={<SentiHome />} />
+          <Route path="/mydietplane" element={<MyDietPlan />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />

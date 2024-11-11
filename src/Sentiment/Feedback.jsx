@@ -13,7 +13,7 @@ function Feedback() {
         </h1>
         <h6 className="text-white text-lg lg:text-2xl font-semibold">
           We'd love to hear from you! Share your feedback on how our AI-powered
-          Diet Plan and Recipe Recommendation Engine has helped you.
+          Diet Plan Recommendation Engine has helped you.
         </h6>
       </div>
     </div>
