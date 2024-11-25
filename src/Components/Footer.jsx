@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
-  faLinkedin,
+  faFacebookF,
+  faLinkedinIn,
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
@@ -22,127 +22,179 @@ const Footer = () => {
   const twitterUrl = "https://www.twitter.com/yourprofile";
 
   return (
-    <footer className="bg-green-100 text-black py-5 pb-0 pt-5 mt-20">
-      <div className="container mx-auto px-4">
+    <footer className="bg-footer-bg text-footer-text py-10">
+      <div className="container mx-auto px-6 lg:px-20">
         <div className="flex flex-wrap justify-between">
-          <div className="w-full sm:w-1/2 lg:w-1/4 mb-6">
-            {/* <img
-              src={logo}
-              alt="Logo"
-              width={150}
-              height={50}
-              className="mix-blend-multiply  rounded-full"
-            /> */}
-            <IoFastFood className="text-6xl lg:text-8xl  rounded-full p-1" />
-            <h2 className="text-lg font-bold mt-4">Connect With Us</h2>
-            <div className="flex mt-2 space-x-4">
+          {/* Connect With Us */}
+          <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
+            <div className="flex items-center mb-4">
+              <IoFastFood className="text-5xl text-primary mr-2" />
+              <span className="text-2xl font-bold">Nirma Abro</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
+            <div className="flex space-x-4">
               <a
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
+                className="text-footer-text hover:text-primary transition-colors duration-300"
               >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="text-green-600 text-2xl"
-                />
+                <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
               <a
                 href={facebookUrl}
-                aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-footer-text hover:text-primary transition-colors duration-300"
               >
-                <FontAwesomeIcon
-                  icon={faFacebook}
-                  className="text-green-600 text-2xl"
-                />
+                <FontAwesomeIcon icon={faFacebookF} size="lg" />
               </a>
               <a
                 href={linkedinUrl}
-                aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-footer-text hover:text-primary transition-colors duration-300"
               >
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="text-green-600 text-2xl"
-                />
+                <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
               </a>
               <a
                 href={twitterUrl}
-                aria-label="Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="text-footer-text hover:text-primary transition-colors duration-300"
               >
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  className="text-green-600 text-2xl"
-                />
+                <FontAwesomeIcon icon={faTwitter} size="lg" />
               </a>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4 mb-6">
-            <h2 className="text-lg font-bold">Services</h2>
-            <ul className="mt-4 space-y-2">
-              <li>Personalized Recipe Recommendations</li>
-              <li>Nutrition Plans</li>
-              <li>Health Goals Tracking</li>
-              <li>Recipe Customization</li>
+
+          {/* Services */}
+          <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
+            <h3 className="text-xl font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">
+                Personalized Recipe Recommendations
+              </li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">
+                Nutrition Plans
+              </li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">
+                Health Goals Tracking
+              </li>
+              <li className="hover:text-primary transition-colors duration-300 cursor-pointer">
+                Recipe Customization
+              </li>
             </ul>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4 mb-6 cursor-pointer ">
-            <h2 className="text-lg font-bold">Pages</h2>
-            <NavLink to="/" className="text-base font-sans block mt-4 ">
-              Home
-            </NavLink>
-            <NavLink to="/aboutus" className="text-base font-sans block mt-2 ">
-              About Us
-            </NavLink>
-            <NavLink to="/getstarted" className="text-base font-sans block mt-2 ">
-              Get Start
-            </NavLink>
-            <NavLink to="/feedback" className="text-base font-sans block mt-2 ">
-              Feedback
-            </NavLink>
-          
-            {/* <ul className="mt-4 space-y-2">
-              <li >Home</li>
-              <li onClick={"/aboutus"} className="cursor-pointer">About Us</li>
-              <li>Get Started</li>
-              <li>Feedback</li>
-            </ul> */}
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4 mb-6">
-            <h2 className="text-lg font-bold">Contact Information</h2>
-            <ul className="mt-4 space-y-2">
+
+          {/* Pages */}
+          <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
+            <h3 className="text-xl font-semibold mb-4">Pages</h3>
+            <ul className="space-y-2">
               <li>
+                <NavLink
+                  to="/"
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/aboutus"
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/getstarted"
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  Get Started
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/feedback"
+                  className="hover:text-primary transition-colors duration-300"
+                >
+                  Feedback
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
+            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <ul className="space-y-4">
+              <li className="flex items-center hover:text-primary transition-colors duration-300">
                 <FontAwesomeIcon
                   icon={faEnvelope}
-                  className="mr-2 text-green-600  text-xl"
+                  className="mr-3 text-xl text-primary"
                 />
-                nirmaabro143@gmail.com
+                <a href="mailto:nirmaabro143@gmail.com" className="hover:underline">
+                  nirmaabro143@gmail.com
+                </a>
               </li>
-              <li>
+              <li className="flex items-center hover:text-primary transition-colors duration-300">
                 <FontAwesomeIcon
                   icon={faPhone}
-                  className="mr-2 text-green-600  text-xl"
+                  className="mr-3 text-xl text-primary"
                 />
-                +1234567890
+                <a href="tel:+1234567890" className="hover:underline">
+                  +1234567890
+                </a>
               </li>
-              <li>
+              <li className="flex items-center hover:text-primary transition-colors duration-300">
                 <FontAwesomeIcon
                   icon={faMapMarkerAlt}
-                  className="mr-2 text-green-600 text-xl"
+                  className="mr-3 text-xl text-primary"
                 />
-                Hyderabad,Pakistan
+                <span>Hyderabad, Pakistan</span>
               </li>
             </ul>
           </div>
         </div>
+
+        {/* Divider */}
+        <hr className="my-8 border-gray-300 dark:border-gray-700" />
+
+        {/* Bottom Footer */}
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm">&copy; 2024 Nirma Abro. All rights reserved.</p>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <NavLink
+              to="/privacy-policy"
+              className="text-sm hover:text-primary transition-colors duration-300"
+            >
+              Privacy Policy
+            </NavLink>
+            <NavLink
+              to="/terms-of-service"
+              className="text-sm hover:text-primary transition-colors duration-300"
+            >
+              Terms of Service
+            </NavLink>
+            <NavLink
+              to="/sitemap"
+              className="text-sm hover:text-primary transition-colors duration-300"
+            >
+              Sitemap
+            </NavLink>
+          </div>
+        </div>
       </div>
-      <div className="text-center mt-8 text-white text-sm bg-green-600 w-full py-5">
-        Copyright © 2024 Your Website. All rights reserved.
+
+      {/* Background Shape or Pattern (Optional) */}
+      <div className="absolute bottom-0 left-0 right-0">
+        {/* Example: A subtle wave or pattern can be added here */}
       </div>
     </footer>
   );

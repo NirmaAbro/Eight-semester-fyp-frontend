@@ -1,74 +1,134 @@
-// context/AuthContext.js
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useCallback, useEffect, useState } from "react";
 import axiosInstance from "../service/axios";
+import { toast } from "react-toastify";
+import { handleErrorApI } from "../Components/utils";
 
+const AuthContext = createContext()
 
-export const AuthContext = createContext();
-
-const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
 
-  // Fetch user data if there's a token on initial load
+
+  const logout = useCallback(async () => {
+    try {
+      localStorage.removeItem('token');
+      setIsAuthenticated(false);
+      setUser(null);
+    } catch (err) {
+      toast.error("logout issue")
+    }
+  }, [])
+
   useEffect(() => {
     const fetchUser = async () => {
-      const token = localStorage.getItem('token');
-     
-      if (token) {
-        try {
-          const response = await axiosInstance.get('/auth/user');
-          setUser(response.data.user);
+      const token = localStorage.getItem("token")
+      try {
+        if (token) {
+          const response = await axiosInstance.get("/auth/user/", { headers: { Authorization: `Bearer ${token}` } })
+          setUser(response.data);
           setIsAuthenticated(true);
-          console.log(response.data,"response wala console");
-        } catch (error) {
-          console.error(error);
-          signOut();
         }
+      } catch (error) {
+        handleErrorApI(error)
       }
-    };
-    fetchUser();
-  }, []);
+    }
+    fetchUser()
+  }, [])
 
-  // Login function
-  const login = async (loginInfo) => {
+  const loadUser = useCallback(async () => {
+    const token = localStorage.getItem("token")
     try {
-        
-      const response = await axiosInstance.post('/auth/login', loginInfo);
-      localStorage.setItem('token', response.data.jwtToken);
-      console.log(response.data);
-      setUser(response.data);
+      if (token) {
+        const response = await axiosInstance.get("/auth/user/", { headers: { Authorization: `Bearer ${token}` } })
+        setUser(response.data);
+        setIsAuthenticated(true);
+      }
+    } catch (err) {
+      handleErrorApI(err)
+    }
+  }, [])
+
+  const login = useCallback(async (data) => {
+    try {
+      const { email, password } = data
+      const response = await axiosInstance.post('/auth/login', { email, password })
+      const { token } = response.data;
+      localStorage.setItem('token', token);
       setIsAuthenticated(true);
+      await loadUser();
+      return response.data
+    } catch (err) {
+      throw err
+    }
+  }, [loadUser])
+
+
+
+  const signup = useCallback(async (data) => {
+    const {
+      username,
+      email,
+      password,
+      age,
+      gender,
+      weight,
+      height
+    } = data
+    try {
+      const response = await axiosInstance.post('/auth/signup', {
+        email,
+        password,
+        username,
+        age,
+        gender,
+        weight,
+        height
+      })
       return response.data;
-    
-    } catch (error) {
-      console.error('Login failed', error);
+    } catch (err) {
+      logout()
+      throw err
     }
-  };
+  }, [logout])
 
-  // Signup function
-  const signup = async (email, password) => {
+
+  const requestOtp = useCallback(async (email) => {
     try {
-      const response = await axiosInstance.post('/auth/signup', { email, password });
-      localStorage.setItem('token', response.data.token);
-      setUser(response.data.user);
-      setIsAuthenticated(true);
-    } catch (error) {
-      console.error('Signup failed', error);
+      const response = await axiosInstance.post('/auth/request-otp', { email });
+      return response.data;
+    } catch (err) {
+      logout()
     }
-  };
+  }, [logout])
 
-  // Sign out function
-  const signOut = () => {
-    localStorage.removeItem('token');
-    setUser(null);
-    setIsAuthenticated(false);
-  };
+  const verifyOtp = useCallback(async (data) => {
+    const { email, otp } = data
+    try {
+      const response = await axiosInstance.post("/auth/verify-otp", { email, otp })
+      return response.data;
+    } catch (error) {
+      toast.error(`${error.response.data}`)
+    }
+  }, [])
+
+  const updatepassword = useCallback(async (data) => {
+    const { email, newPassword } = data
+    try {
+      const response = await axiosInstance.post("/auth/update-password", { email, newPassword })
+      return response.data
+    } catch (error) {
+      toast.error(`${error.response.data}`)
+    }
+  }, [])
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, login, signup, signOut }}>
+    <AuthContext.Provider
+      value={{ login, isAuthenticated, user, signup, logout, requestOtp, verifyOtp, updatepassword }}
+    >
       {children}
     </AuthContext.Provider>
-  );
-};
+  )
+}
 
-export default AuthProvider;
+export default AuthContext;

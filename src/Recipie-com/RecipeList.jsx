@@ -13,35 +13,35 @@ const recipes = [
     image: img1,
     title: "Aloo Gobi",
     content:
-      "Aloo Gobi features potatoes and cauliflower cooked with turmeric, cumin, and other spices, providing a comforting and nutritious dish rich in vitamins and antioxidants",
+      "Aloo Gobi features potatoes and cauliflower cooked with turmeric, cumin, and other spices, providing a comforting and nutritious dish rich in vitamins and antioxidants.",
   },
   {
     id: 2,
     image: img2,
     title: "Palak Paneer",
     content:
-      "Palak Paneer features creamy spinach cooked with paneer (Indian cottage cheese) and spices such as fenugreek and cumin, offering a rich source of calcium, vitamins, and iron",
+      "Palak Paneer features creamy spinach cooked with paneer (Indian cottage cheese) and spices such as fenugreek and cumin, offering a rich source of calcium, vitamins, and iron.",
   },
   {
     id: 3,
     image: img3,
     title: "Dal Tadka",
     content:
-      "Dal Tadka consists of yellow lentils tempered with spices like mustard seeds and curry leaves, known for its high protein content, fiber, and heart-healthy benefits",
+      "Dal Tadka consists of yellow lentils tempered with spices like mustard seeds and curry leaves, known for its high protein content, fiber, and heart-healthy benefits.",
   },
   {
     id: 4,
     image: img4,
     title: "Chana Masala",
     content:
-      "Chana Masala is a flavorful chickpea curry cooked in a tomato-based sauce with aromatic spices like coriander and garam masala, providing plant-based protein and beneficial antioxidants",
+      "Chana Masala is a flavorful chickpea curry cooked in a tomato-based sauce with aromatic spices like coriander and garam masala, providing plant-based protein and beneficial antioxidants.",
   },
   {
     id: 5,
     image: img5,
     title: "Matar Paneer",
     content:
-      "Matar Paneer combines peas and paneer (Indian cottage cheese) in a creamy tomato-based sauce flavored with spices like turmeric and garam masala, offering a blend of protein and essential nutrients",
+      "Matar Paneer combines peas and paneer (Indian cottage cheese) in a creamy tomato-based sauce flavored with spices like turmeric and garam masala, offering a blend of protein and essential nutrients.",
   },
   {
     id: 6,
@@ -54,8 +54,8 @@ const recipes = [
 
 const RecipeList = () => {
   return (
-    <div className="m-4 mt-20 flex flex-wrap  items-center justify-center">
-      <h1 className=" text-2xl md:text-4xl lgtext-5xl text-black font-sans font-bold lg:m-28 whitespace-nowrap w-full justify-center text-center items-center">
+    <div className="m-4 mt-20 flex flex-wrap items-center justify-center">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl text-black font-sans font-bold lg:m-28 whitespace-nowrap w-full text-center mb-12">
         Learn About Healthier Food
       </h1>
 
