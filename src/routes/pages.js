@@ -4,7 +4,6 @@ import Menues from "../Components/Menues";
 import Dashboard from "../Components/Dashboard";
 import Premiere from "../Components/Premiere";
 import NotFound from "../Components/NotFound";
-import UpperNav from "../Components/UpperNav";
 import Navbar from "../Components/Navbar";
 import Section2 from "../Components/Section2";
 
@@ -14,7 +13,6 @@ export {
   Menues,
   Dashboard,
   Premiere,
-  UpperNav,
   Navbar,
   Section2,
   NotFound,

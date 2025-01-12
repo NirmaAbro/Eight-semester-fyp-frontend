@@ -1,4 +1,3 @@
-// src/components/Getstarted.js
 import React, { useState } from "react";
 import { generateDietPlans } from "./api";
 import DietPlanList from "./DietPlanList";
@@ -249,7 +248,7 @@ function Getstarted() {
 
             </button>
           </div>
-          <ToastContainer
+          {/* <ToastContainer
             position="top-right"
             autoClose={3000}
             hideProgressBar
@@ -259,7 +258,7 @@ function Getstarted() {
             pauseOnFocusLoss
             draggable
             pauseOnHover
-          />
+          /> */}
         </form>
       </div>
       {/* Diet Plans List */}

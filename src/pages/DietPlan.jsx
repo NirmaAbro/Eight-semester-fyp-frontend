@@ -19,6 +19,7 @@ const DietPlan = () => {
     const fetchDietPlan = async () => {
       try {
         const response = await axios.get(
+        
           `http://localhost:8080/api/dietplans/${userId}`, // Use userId in the URL
           {
             headers: { Authorization: `Bearer ${token}` }, // Attach token to request

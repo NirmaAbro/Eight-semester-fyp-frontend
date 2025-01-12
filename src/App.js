@@ -7,11 +7,7 @@ import Premium from "./Components/Premium";
 import NotFound from "./Components/NotFound";
 import Footer from "./Components/Footer";
 import SentiHome from "./Sentiment/SentiHome";
-import RefrshHandler from "./Components/RefrshHandler";
-import UpperNav from "./Components/UpperNav";
-import { useState } from "react";
 import MyDietPlan from "./pages/MyDietPlan";
-import Settings from "./pages/Settings";
 import DietPlan from "./pages/DietPlan";
 import Navbar from "./Components/Home/Navbar";
 import AboutHome from "./Components/About/AboutHome";
@@ -25,7 +21,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <UpperNav />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -40,7 +35,7 @@ function App() {
           <Route path="/getstarted" element={<Getstarted />} />
           <Route path="/feedback" element={<SentiHome />} />
           <Route path="/mydietplane" element={<MyDietPlan />} />
-          <Route path="/settings" element={<Settings />} />
+          {/* <Route path="/settings" element={<Settings />} /> */}
           <Route path="/dietplan" element={<DietPlan />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>

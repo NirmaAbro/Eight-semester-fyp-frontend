@@ -4,7 +4,7 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdCloseCircle } from "react-icons/io";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaHome, FaInfoCircle, FaClipboardList, FaComments } from "react-icons/fa";
-import { SettingOutlined, ProfileOutlined, FileOutlined, DownOutlined, LogoutOutlined } from "@ant-design/icons";
+import {  ProfileOutlined, FileOutlined, DownOutlined, LogoutOutlined } from "@ant-design/icons";
 import useAuth from "../../hooks/useAuth";
 import { Dropdown, Menu, Button } from "antd";
 
@@ -27,9 +27,9 @@ function Navbar() {
       <Menu.Item key="dietPlans" icon={<FileOutlined />}>
         <NavLink to="/my-diet-plans">My Diet Plans</NavLink>
       </Menu.Item>
-      <Menu.Item key="settings" icon={<SettingOutlined />}>
+      {/* <Menu.Item key="settings" icon={<SettingOutlined />}>
         <NavLink to="/settings">Settings</NavLink>
-      </Menu.Item>
+      </Menu.Item> */}
       <Menu.Item key="logout" icon={<LogoutOutlined />}>
         <span onClick={() => logout()}>Logout</span>
       </Menu.Item>

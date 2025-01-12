@@ -37,7 +37,7 @@ export const generateDietPlans = async ({
       body: JSON.stringify({
         prompt: prompt,
         temperature: 0.4,
-        max_tokens: 1000, // Increased max_tokens to get more detailed responses for two plans
+        max_tokens: 300, // Increased max_tokens to get more detailed responses for two plans
         n: 2, // Generate two completions
       }),
     });

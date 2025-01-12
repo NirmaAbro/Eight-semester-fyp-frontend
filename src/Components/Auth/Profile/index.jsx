@@ -23,7 +23,7 @@ function UserProfile() {
                         to="/edit-profile"
                         className="mt-6 inline-flex items-center bg-accent text-primary font-semibold px-6 py-2 rounded-full shadow hover:bg-yellow-600 transition duration-300"
                     >
-                        Edit Profile
+                     welcome
                         <svg
                             className="w-4 h-4 ml-2"
                             fill="none"
