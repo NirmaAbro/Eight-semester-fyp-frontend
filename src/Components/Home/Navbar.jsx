@@ -86,7 +86,7 @@ function Navbar() {
                 <NavLink
                   to="/signup"
                   className={({ isActive }) =>
-                    `px-4 py-2 border border-transparent rounded-md text-lg font-medium text-green-700 bg-white hover:bg-gray-100 transition duration-300 ${isActive ? "bg-gray-100 text-green-700" : ""
+                    `px-4 py-2 border border-transparent rounded-md text-lg font-medium text-blue-900 bg-white hover:bg-gray-100 transition duration-300 ${isActive ? "bg-gray-100 text-green-700" : ""
                     }`
                   }
                 >
@@ -114,7 +114,7 @@ function Navbar() {
         </div>
 
         {isNavOpen && (
-          <div className="lg:hidden animate-slide-in bg-gradient-to-r from-green-600 to-green-800">
+          <div className="lg:hidden animate-slide-in bg-blue-900 text-white ">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {[
                 { path: "/", label: "Home", Icon: FaHome },
@@ -126,7 +126,7 @@ function Navbar() {
                   key={path}
                   to={path}
                   className={({ isActive }) =>
-                    `flex items-center text-white px-3 py-2 rounded-md text-base font-medium hover:bg-green-700 transition duration-300 ${isActive ? "bg-green-700" : ""
+                    `flex items-center text-white px-3 py-2 rounded-md text-base font-medium hover:bg-blue-900 transition duration-300 ${isActive ? "bg-blue-900 text-white" : ""
                     }`
                   }
                   onClick={() => setIsNavOpen(false)}
@@ -138,7 +138,7 @@ function Navbar() {
                 <NavLink
                   to="/signin"
                   className={({ isActive }) =>
-                    `block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-green-700 transition duration-300 ${isActive ? "bg-green-700" : ""
+                    `block hover:text-blue-900 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-white transition duration-300 ${isActive ? "bg-white text-blue-900" : ""
                     }`
                   }
                   onClick={() => setIsNavOpen(false)}
@@ -148,7 +148,7 @@ function Navbar() {
                 <NavLink
                   to="/signup"
                   className={({ isActive }) =>
-                    `block text-green-700 bg-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 transition duration-300 ${isActive ? "bg-gray-100" : ""
+                    `block text-blue-900 bg-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 transition duration-300 ${isActive ? "bg-gray-100 text-blue-900" : ""
                     }`
                   }
                   onClick={() => setIsNavOpen(false)}
