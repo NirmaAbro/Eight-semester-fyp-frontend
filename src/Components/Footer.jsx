@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-1/4 mb-8">
             <div className="flex items-center mb-4">
               <IoFastFood className="text-5xl text-primary mr-2" />
-              <span className="text-2xl font-bold">Nirma Abro</span>
+              <span className="text-2xl font-bold">Smart Plate</span>
             </div>
             <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
@@ -77,7 +77,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li className="hover:text-primary transition-colors duration-300 cursor-pointer">
-                Personalized Recipe Recommendations
+                Personalized Diet Plan Recommendations
               </li>
               <li className="hover:text-primary transition-colors duration-300 cursor-pointer">
                 Nutrition Plans
@@ -86,7 +86,7 @@ const Footer = () => {
                 Health Goals Tracking
               </li>
               <li className="hover:text-primary transition-colors duration-300 cursor-pointer">
-                Recipe Customization
+               Diet Plane Customization
               </li>
             </ul>
           </div>
