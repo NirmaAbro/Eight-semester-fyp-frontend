@@ -44,7 +44,7 @@ function HeroSection() {
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
           {/* Get Started Button */}
           <button
-            className="bg-primary text-secondary font-bold py-3 px-6 rounded-full shadow-lg hover:bg-primary-dark hover:scale-105 transition duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-opacity-50 animate-bounceOnce"
+            className="bg-primary text-secondary justify-center items-center text-center font-bold py-3 px-6 rounded-full shadow-lg hover:bg-primary-dark hover:scale-105 transition duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-opacity-50 animate-bounceOnce"
             onClick={() => navigate("/getstarted")}
             aria-label="Get Started with Smart Diet Plan"
           >
@@ -52,14 +52,14 @@ function HeroSection() {
           </button>
 
           {/* Watch Video Button */}
-          <button
+          {/* <button
             className="flex items-center bg-primary text-secondary font-bold py-3 px-6 rounded-full shadow-lg hover:bg-primary-dark hover:scale-105 transition duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-opacity-50 animate-bounceOnce"
             onClick={() => navigate("/watch-video")}
             aria-label="Watch Introduction Video"
           >
             <span>Watch Video</span>
             <FaPlay className="ml-2" />
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

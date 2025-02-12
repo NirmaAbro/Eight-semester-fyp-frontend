@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 function AboutHero() {
+
   return (
     <div
       className="relative h-screen bg-cover bg-center flex flex-col justify-center items-center text-center"
@@ -17,7 +18,7 @@ function AboutHero() {
           Discover personalized diet plans tailored to your needs with our advanced diet plan recommendation engine.
         </p>
         <Link
-          to="/get-started"
+          to="/getstarted"
           className="inline-flex items-center bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-accent-dark transition duration-300 animate-bounce"
         >
           Get Started

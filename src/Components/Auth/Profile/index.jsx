@@ -20,7 +20,7 @@ function UserProfile() {
                     <h2 className="text-2xl font-semibold text-white mt-4">{user?.username}</h2>
                     <p className="text-accent mt-2">{user?.role.charAt(0).toUpperCase() + user?.role.slice(1)}</p>
                     <Link
-                        to="/edit-profile"
+                        // to="/edit-profile"
                         className="mt-6 inline-flex items-center bg-accent text-primary font-semibold px-6 py-2 rounded-full shadow hover:bg-yellow-600 transition duration-300"
                     >
                      welcome

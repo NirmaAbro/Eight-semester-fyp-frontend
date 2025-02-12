@@ -136,9 +136,9 @@ function Navbar() {
               ))}
               <div className="mt-3 space-y-1">
                 <NavLink
-                  to="/signin"
+                  to="/login"
                   className={({ isActive }) =>
-                    `block hover:text-blue-900 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-white transition duration-300 ${isActive ? "bg-white text-blue-900" : ""
+                    `block text-blue-900 bg-white hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium  transition duration-300 ${isActive ? "bg-white text-blue-900" : ""
                     }`
                   }
                   onClick={() => setIsNavOpen(false)}

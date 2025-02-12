@@ -2,7 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { TiTick } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa";
-import pic from "../../images/ourteam.jpg"; // Ensure the path is correct
+import { GiMeal } from "react-icons/gi";
+import pic from "../../images/ourteam.jpg"; 
 
 function Discover() {
   const navigate = useNavigate();
@@ -49,11 +50,12 @@ function Discover() {
           {/* Call-to-Action Button */}
           <button
             className="flex items-center bg-primary text-secondary font-bold py-3 px-6 rounded-full shadow-lg hover:bg-primary-dark hover:scale-105 transition duration-300 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-opacity-50 animate-bounceOnce"
-            onClick={() => navigate("/discover-more")}
+            // onClick={() => navigate("/discover-more")}
             aria-label="Discover More Recipes"
           >
-            Discover More
-            <FaArrowRight className="ml-2" />
+           Healthier Diet
+            {/* <FaArrowRight className="ml-2" /> */}
+            <GiMeal  className="ml-2" />
           </button>
         </div>
       </div>
